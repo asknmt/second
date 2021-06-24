@@ -1,0 +1,641 @@
+body {
+  font-family: '游明朝','Yu Mincho',YuMincho,'Hiragino Mincho Pro',serif;
+  color: #171717;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+html {
+  height: 100%;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  height: 56px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  transition: all .5s;
+}
+header h3 {
+  line-height: 56px;
+  margin: 0;
+}
+/*ヘッダーの変更後の背景*/
+.change-color {
+  background-color: rgba(48, 47, 47, 0.555);
+}
+
+.img {
+  background-image: url(img/fv-bgi_01.jpg );
+  transition: background-image 2.5S ease; /*背景画像をゆっくり変化させる*/
+  background-size: cover;
+  height: auto;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  background-color: black;
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  height: 56px;
+}
+.top-list a {
+  line-height: 56px;
+}
+
+.top-list a {
+  color: rgb(255, 250, 245);
+  font-size: 18px;
+  padding-right: 80px;
+}
+
+.top-title {
+  color: rgb(255, 250, 245);
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+.top-title h2 {
+  margin-top: 32px;
+}
+/* トップの幅調整*/
+.top-text {
+  width: 90%;
+  margin: 0 auto;
+}
+.drawer {
+  width: 0;
+  display: none;
+}
+/* チェックボックスは非表示に */
+.drawer-hidden {
+  display: none;
+}
+/* ハンバーガーアイコンの設置スペース */
+.drawer-open {
+  display: flex;
+  height: 56px;
+  width:  30%;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 100;/* 重なり順を一番上に */
+  cursor: pointer;
+  float: right;
+  z-index: 100;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+}
+/* ハンバーガーメニューのアイコン */
+.drawer-open span,
+.drawer-open span:before,
+.drawer-open span:after {
+  display: hide;
+}
+/* 三本線のうち一番上の棒の位置調整 */
+.drawer-open span:before {
+  bottom: 8px;
+}
+/* 三本線のうち一番下の棒の位置調整 */
+.drawer-open span:after {
+  top: 8px;
+}
+/* アイコンがクリックされたら真ん中の線を透明にする */
+#drawer-check:checked ~ .drawer-open span {
+  background: rgba(255, 255, 255, 0);
+}
+/* アイコンがクリックされたらアイコンが×印になように上下の線を回転 */
+#drawer-check:checked ~ .drawer-open span::before {
+  bottom: 0;
+  transform: rotate(45deg);
+}
+#drawer-check:checked ~ .drawer-open span::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+/* メニューのデザイン*/
+.drawer-content {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 100%;/* メニューを画面の外に飛ばす */
+  z-index: 99;
+  background: white;
+  transition: .5s;
+  text-align: center;
+  padding-top: 104px;
+}
+.drawer-content ul {
+  list-style: none;
+}
+.drawer-content a {
+  color: black;
+}
+/* アイコンがクリックされたらメニューを表示 */
+@media (max-width: 700px){
+#drawer-check:checked ~ .drawer-content {
+  left: 0;/* メニューを画面に入れる */
+}}
+/* チェックボックスは非表示に */
+.drawer-hidden {
+  display: none;
+}
+
+header h3 {
+  color: rgb(255, 250, 245);
+  font-size: 28px;
+  letter-spacing: 3px;
+  width: 100%;
+  padding-left: 96px;
+}
+
+.top-title h1 {
+  font-size: 50px;
+  margin-top: 33%;
+  padding: 0;
+}
+
+.top-title h2 {
+  font-size: 30px;
+  margin-left: 72px;
+  padding-bottom: 80px;
+}
+
+.top-title h2 br {
+  display: none;
+}
+
+.concept {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.concept h2,.service h2 {
+  font-size: 60px;
+  margin: 96px 0 64px 0;
+  letter-spacing: 7px;
+}
+
+.concept h3 {
+  font-size: 24px;
+  text-align: center;
+}
+.concept-img {
+  display: flex;
+  margin: 0 auto;
+  margin-top: 64px;
+  width: 90%;
+}
+
+.concept-img img {
+  margin-left: 56px;
+  display: block;
+  width: 50%;
+}
+
+.concept-img p {
+  margin-top: 64px;
+  font-size: 18px;
+  font-family: 'Osaka';
+  margin-right: 32px;
+  width: 50%;
+  line-height: 25px;
+}
+
+.conce-h4,.ser-h4 {
+  text-align: right;
+  font-size: 70px;
+  letter-spacing: 10px;
+  margin: 48px 56px;
+}
+.conce-h4 h4,.ser-h4 h4 {
+  color: rgba(255, 234, 208, 0.644);
+  font-size: 70px;
+  }  
+.h3-br1 {
+  display: none;
+}
+.contents {
+  display: flex;
+  justify-content: space-between;
+  height: auto;
+  padding-bottom: 72px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.content {
+  width: 28%;
+  box-shadow: 0px 0px 6px rgba(27, 19, 16, 0.4);
+}
+.content img {
+  width: 100%;
+  vertical-align: bottom;/* 画像とテキストの隙間をうめる*/
+}
+
+.content p {
+  margin: 0 auto;
+  line-height: 45px;
+  font-weight: border;
+  padding:16px 32px;
+  font-size: 15px;
+  background-color:aliceblue;
+  margin-top: 0;
+  height: 40%;
+}
+
+.works {
+  margin: 0 auto;
+}
+
+.works-img {
+  background-image: url(img/works-bgi@2x.jpg);
+  background-size: cover;
+  width: 100%;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.works-size {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.work-title {
+  display: inline-block;
+  width: 90%;
+}
+.work-title h2,.cont-h2 h2{
+  color: white;
+  text-align: right;
+  width: 100%;
+  letter-spacing: 7px;
+  font-size: 60px;
+  padding: 96px 0 64px 0;
+}
+
+.view-btn {
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+}
+
+.view-btn a {
+  background-color: rgb(255, 217, 0);
+  padding: 16px 72px;
+  border-radius: 30px;
+}
+
+.work-h4 h4 {
+font-size: 70px;
+color: rgba(172, 170, 169, 0.411);
+padding: 96px 0 80px 80px;
+letter-spacing: 10px;
+}
+/*サービス*/
+.service {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.service-cont {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+
+.ser-contents {
+  display: flex;
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.service-content {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  font-size: 0;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.ser-img {
+  width: 100%;
+}
+
+.img-p {
+  position: absolute;
+  top: center;
+  left: center;
+  color: white;
+  font-size: 30px;
+  display: block;
+}
+
+.conce-h4,.ser-h4 {
+  text-align: right;
+  font-size: 70px;
+  letter-spacing: 10px;
+  margin: 48px 56px;
+}
+.conce-h4 h4,.ser-h4 h4 {
+  color: rgba(255, 234, 208, 0.644);
+  font-size: 70px;
+  text-align: right;
+}  
+
+/*ホバー*/
+.hover {
+  z-index: 1;
+  background-color: black;/*黒を重ねる*/
+}
+
+.ser-img:hover {
+  opacity: 0.5;/*黒を透かす*/
+  transition: all 0.3s ease-in-out;
+}
+
+.contact {
+  background-image: url(img/contact-bgi@2x.jpg);
+  width: 100%;
+  background-size: cover;
+  height: 100%;
+}
+
+.contact-form {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.form-text {
+  text-align: center;
+}
+
+.form-text p {
+  color: white;
+  height: 50%;
+  margin-bottom: 56px;
+  font-size: 20px;
+}
+
+.form-text a {
+  background-color: rgb(255, 217, 0);
+  padding: 16px 72px;
+  border-radius: 30px;
+}
+
+.con-h4 h4 {
+  font-size: 70px;
+  color: rgba(172, 170, 169, 0.411);
+  padding: 96px 0 80px 80px;
+  margin: 0 auto;
+  letter-spacing: 10px;
+}
+
+footer {
+  height: 48px;
+}
+
+footer p {
+  text-align: center;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 48px;
+}
+
+/*スマホ設定*/
+@media (max-width: 670px){
+  .wrap {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .header {
+    width: 100%;
+    border-bottom: solid white;
+  }
+
+  header h3 {
+    font-size: 20px;
+    padding-left: 32px;
+  }
+
+  .change-color {
+    display: none;
+  }
+  .img {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .top-text {
+    width: 90%;
+    margin: 0 auto;
+  }
+/*リスト非表示*/
+  .top-list {
+    display: none;
+  }
+
+  .top-title {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .top-title h1{
+  font-size: 39px;
+  text-align: center;
+  padding-top: 104px;
+  width: 100%;
+}
+  .top-title h2{
+  font-size: 30px;
+  text-align: center;
+  margin: 0 auto;
+  padding-bottom: 200px;
+  margin-top: 32px;
+  line-height: 38px;
+}
+  
+.top-title h2 br {
+  display: inline;
+}
+.concept h2,.work-title h2,.service h2{
+  font-size: 35px;
+  margin: 48px 0 32px;
+}
+.cont-h2 h2{
+  font-size: 35px;
+  padding: 48px 0 32px;
+}
+.concept {
+  width: 90%;
+}
+.concept-img {
+  margin-top: 0;
+  display: block;
+}
+.concept-img p {
+  margin-top: 48px;
+  width: 100%;
+  font-size: 15px;
+}
+.concept-img img {
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 32px;
+}
+.concept h3 {
+  font-size: 20px;
+  line-height: 25px;
+}
+.conce-h4 {
+  padding-top: 0;
+}
+.conce-h4 h4,.ser-h4 h4 {
+  margin-left: 32px;
+}
+
+.h3-br1 {
+  display: inline;
+}
+
+.h3-br2 {
+  display: none;
+}
+
+.body-img {
+  display: block;
+  width: 100%;
+}
+
+.body-img p {
+  width: 100%;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.body-img img,.content {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.conce-h4 h4,.work-h4 h4,.ser-h4 h4,.con-h4 h4 {
+  font-size: 40px;
+  width: 100%;
+  letter-spacing: 2px;
+}
+
+.contents {
+  display: block;
+  width: 100%;
+  padding-bottom: 40px;
+}
+
+.content {
+  margin-bottom: 32px;
+}
+
+/*サービス*/
+.service {
+  width: 90%;
+}
+.service h2 {
+  margin-left: 0;
+}
+.conce-h4, .ser-h4 {
+  text-align: right;
+  font-size: 60px;
+  letter-spacing: 10px;
+  margin: 32px 40px;
+}
+.ser-contents {
+  display: block;
+  width: 100%;
+}
+
+.planning {
+  margin: 32px 0;
+}
+
+.img-p {
+  font-size: 20px;
+}
+
+/*コンタクト*/
+.contact {
+  width: 100%;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  height: auto;
+}
+.contact-form {
+  width: 100%;
+}
+
+.contact-size {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.work-h4 h4,.con-h4 h4 {
+  padding: 48px 16px;
+}
+.form-text a {
+  margin: 0 auto;
+}
+
+/*フッター*/
+footer p {
+  font-size: 10px;
+}
+
+/*ハンバーガーメニュー*/
+.drawer-open span,
+.drawer-open span:before,
+.drawer-open span:after {
+  content: '';
+  display: block;
+  height: 3px;
+  width: 24px;
+  border-radius: 3px;
+  background: rgb(126, 125, 125);
+  transition: 0.5s;
+  position: absolute;
+}
+
+.drawer-item {
+  font-size: 30px;
+  padding-bottom: 40px;
+}
+
+.drawer {
+  display: block;
+}
+a {
+  text-decoration: none; 
+}
+
+.drawer-list {
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+}
