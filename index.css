@@ -188,6 +188,7 @@ header h3 {
 .concept h3 {
   font-size: 24px;
   text-align: center;
+  line-height: 30px;
 }
 .concept-img {
   display: flex;
