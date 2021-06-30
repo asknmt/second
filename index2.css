@@ -1,0 +1,67 @@
+/*タブレット*/
+@media (max-width: 1050px){
+  header h3 {
+    font-size: 1.5rem;
+    margin-left: 32px;
+  }
+  .top-list a {
+    line-height: 56px;
+    color: rgb(255, 250, 245);
+    margin-right: 32px;
+  }  
+  .top-title {
+    margin-left: 32px;
+  }
+  .top-title h1 {
+    font-size: 2.8rem;
+  }  
+  .top-title h2 {
+    font-size: 1.8rem;
+  }  
+  .concept h2 ,.service h2 {
+    font-size: 3rem;
+    margin: 64px 0 40px 32px;
+    letter-spacing: 7px;
+  }
+  .works-img h2,.contact h2{
+    padding: 64px 32px 40px 0;
+  }
+  .concept h4,.service h4 {
+    font-size: 3.5rem;
+    margin: 48px 32px 56px 0;
+  }
+  .works-img h4,.contact h4 {
+    font-size: 3.5rem;
+    padding: 48px 0 56px 32px;
+  }
+  .concept {
+    width: 100%;
+  }
+.works-size {
+    width: 90%;
+    margin: 0 auto;
+  }  
+  .concept-img {
+    width: 90%;
+  }
+  .concept-img img {
+    width: 45%;
+    height: 45%;
+  }
+  .concept-img p {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin: 0;
+  }  
+  .contents {
+    width: 100%;
+  }
+  .content {
+    width: 30%;
+  }
+  .content p {
+    padding: 8px 16px;
+    line-height: 2;
+    height: auto;
+  }
+}
