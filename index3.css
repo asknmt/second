@@ -1,0 +1,187 @@
+/*スマホ設定*/
+@media (max-width: 670px){
+  header h3 {
+    font-size: 1.2rem;
+  }
+  .change-color {
+    display: none;
+  }
+  .top-text {
+    width: 100%;
+    margin: 0 auto;
+  }
+/*リスト非表示*/
+  .top-list {
+    display: none;
+  }
+
+  .top-title {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .top-title h1{
+  font-size: 2.3rem;
+  text-align: center;
+  padding-top: 104px;
+  width: 100%;
+}
+  .top-title h2{
+  font-size: 1.6rem;
+  text-align: center;
+  margin: 0 auto;
+  padding-bottom: 200px;
+  margin-top: 32px;
+  line-height: 1.5;
+}
+  
+.top-title h2 br {
+  display: inline;
+}
+.concept h2,.work-title h2,.service h2{
+  font-size: 2rem;
+  margin: 48px 0 32px 16px;
+}
+.concept {
+  width: 100%;
+  margin: 0 auto;
+}
+.concept-img {
+  display: block;
+}
+.concept-img p {
+  width: 100%;
+  font-size: 1rem;
+}
+.concept-img img {
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 32px;
+}
+.concept h3 {
+  margin-bottom: 40px;
+  font-size: 1.2rem;
+  line-height: 1.2;
+}
+
+.h3-br1 {
+  display: inline;
+}
+.h3-br2 {
+  display: none;
+}
+
+.body-img {
+  display: block;
+  width: 100%;
+}
+
+.body-img p {
+  width: 100%;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.body-img img,.content {
+  width: 100%;
+  margin: 0 auto;
+}
+.concept h2 ,.service h2 {
+  font-size: 2rem;
+  margin: 56px 0 32px 16px;
+  letter-spacing: 7px;
+}
+.works-img h2,.contact h2{
+  font-size: 2rem;
+  padding: 56px 16px 32px 0;
+}
+
+.concept h4,.service h4 {
+  font-size: 2.3rem;
+  margin: 24px 16px 32px 0;
+  letter-spacing: 2px;
+}
+.works-img h4,.contact h4 {
+  font-size: 2.3rem;
+  padding: 56px 0 32px 16px;
+  letter-spacing: 2px;
+}
+
+.contents {
+  display: block;
+  width: 100%;
+  padding-bottom: 40px;
+}
+
+.content {
+  margin-bottom: 32px;
+}
+
+/*サービス*/
+.ser-contents {
+  display: block;
+  width: 100%;
+}
+
+.planning {
+  margin: 32px 0;
+}
+
+.img-p {
+  font-size: 20px;
+}
+
+/*コンタクト*/
+.contact {
+  width: 100%;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  height: auto;
+}
+.form-text p {
+  font-size: 1rem;
+  margin: 64px 0 96px 0;
+}
+.form-text a {
+  margin: 0 auto;
+}
+
+/*フッター*/
+footer p {
+  font-size: 0.2rem;
+}
+
+/*ハンバーガーメニュー*/
+.drawer-open span,
+.drawer-open span:before,
+.drawer-open span:after {
+  content: '';
+  display: block;
+  height: 3px;
+  width: 24px;
+  border-radius: 3px;
+  background: rgb(126, 125, 125);
+  transition: 0.5s;
+  position: absolute;
+}
+
+.drawer-item {
+  font-size: 1.5rem;
+  padding-bottom: 40px;
+}
+
+.drawer {
+  display: block;
+}
+a {
+  text-decoration: none; 
+}
+
+.drawer-list {
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+}
