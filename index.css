@@ -1,3 +1,6 @@
+* {`
+font-feature-settings: "palt";
+}
 body {
   font-family: '游明朝','Yu Mincho',YuMincho,'Hiragino Mincho Pro',serif;
   color: #171717;
